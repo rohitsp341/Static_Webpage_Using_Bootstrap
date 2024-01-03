@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to create an awesome responsive footer design using HTML and CSS</title>
-  <link rel="stylesheet" type="text/css" href="style.css"> </head>
+  <link rel="stylesheet" type="text/css" href="style.css">    </head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;800&display=swap" rel="stylesheet">
@@ -25,8 +25,8 @@
                   
                 </form>
                 <form class="form-inline">
-                    <a href="#Home" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">Home</a>
-                    <a href="#About" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">About</a>
+                    <a href="#Home" class="b1 btn btn-danger btn-white " onclick="changeColor(this)">Home</a>
+                    <a href="#About" class="b1 btn btn-danger btn-white " onclick="changeColor(this)">About</a>
                     <a href="#Views" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">Views</a>
                     <a href="#Contact" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">Contact Me</a>
                    
@@ -230,18 +230,15 @@
     </div>
   </footer>
   <script>
-    let b1=document.getElementsByClassName("b1");
-    function changeColor(b1) {
-     
-      if (b1.classList.contains('btn-red')) {
+    function changeColor(button) {
       
-        b1.classList.remove('btn-red');
-        b1.classList.add('btn-white');
-      } else {
-       
-        b1.classList.remove('btn-white');
-        b1.classList.add('btn-red');
-      }
+      let buttons=document.getElementsByClassName('b1');
+      buttonsArr=Array.from(buttons);
+      buttonsArr.map((elem)=>{
+          elem.classList.remove('btn-red');
+      });
+      button.classList.add('btn-red');
+     
     }
   </script>
   
