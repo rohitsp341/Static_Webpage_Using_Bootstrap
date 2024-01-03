@@ -25,10 +25,10 @@
                   
                 </form>
                 <form class="form-inline">
-                    <a href="#Home" class="btn btn-danger btn-white" onclick="changeColor(this)">Home</a>
-                    <a href="#About" class="btn btn-danger btn-white" onclick="changeColor(this)">About</a>
-                    <a href="#Views" class="btn btn-danger btn-white" onclick="changeColor(this)">Views</a>
-                    <a href="#Contact" class="btn btn-danger btn-white" onclick="changeColor(this)">Contact Me</a>
+                    <a href="#Home" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">Home</a>
+                    <a href="#About" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">About</a>
+                    <a href="#Views" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">Views</a>
+                    <a href="#Contact" class="b1 btn btn-danger btn-white" onclick="changeColor(this)">Contact Me</a>
                    
                   </form>
                 
@@ -230,16 +230,17 @@
     </div>
   </footer>
   <script>
-    function changeColor(button) {
+     let b1=document.getElementsByClassName("b1");
+    function changeColor(b1) {
      
-      if (button.classList.contains('btn-red')) {
+      if (b1.classList.contains('btn-red')) {
       
-        button.classList.remove('btn-red');
-        button.classList.add('btn-white');
+        b1.classList.remove('btn-red');
+        b1.classList.add('btn-white');
       } else {
        
-        button.classList.remove('btn-white');
-        button.classList.add('btn-red');
+        b1.classList.remove('btn-white');
+        b1.classList.add('btn-red');
       }
     }
   </script>
